@@ -16,4 +16,4 @@ wordcloud==1.8.2.2
 nltk==3.8
 snscrape==0.4.3.20220106
 textblob==0.17.1
-
+spacy==3.4.4
