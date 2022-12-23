@@ -11,8 +11,8 @@ spacy==3.4.4
 protobuf==3.19.0
 matplotlib==3.6.2
 pandas_datareader==0.10.0
-tensorflow==2.11.0
-keras==2.11.0
+tensorflow
+keras
 arrow==1.2.3
 wordcloud==1.8.2.2
 nltk==3.8
