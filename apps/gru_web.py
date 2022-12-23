@@ -63,7 +63,7 @@ def app():
     names = cycle(['Stock Open Price','Stock Close Price','Stock High Price','Stock Low Price'])
     fig2 = px.line(dfi, x=dfi.Date, y=[dfi['Open'], dfi['Close'], dfi['High'], dfi['Low']],
             labels={'date': 'Date','value':'Stock value'})
-    fig2.update_layout(title_text='Stock analysis chart', font_size=15, font_color='black',legend_title_text='Stock Parameters')
+    fig2.update_layout(title_text='Stock analysis chart', font_size=15,legend_title_text='Stock Parameters')
     fig2.for_each_trace(lambda t:  t.update(name = next(names)))
     fig2.update_xaxes(showgrid=False)
     fig2.update_yaxes(showgrid=False)
@@ -74,7 +74,7 @@ def app():
     closedf =dfi[['Date','Close']]
     fig3= px.line(closedf, x=closedf.Date, y=closedf.Close, labels={'date':'Date','close':'Close Stock'})
     fig3.update_traces(marker_line_width=2, opacity=0.8)
-    fig3.update_layout(title_text='Stock Close Price', font_size=15, font_color='black',legend_title_text='Stock Parameters')
+    fig3.update_layout(title_text='Stock Close Price', font_size=15,legend_title_text='Stock Parameters')
     fig3.update_xaxes(showgrid=False)
     fig3.update_yaxes(showgrid=False)
     st.subheader("Trazado del gráfico de precios de cierre de acciones")
@@ -87,7 +87,7 @@ def app():
     st.write("Período considerado para predecir el precio de cierre de las acciones")
     fig4 = px.line(closedf, x=closedf.Date, y=closedf.Close,labels={'date':'Date','close':'Close Stock'})
     fig4.update_traces(marker_line_width=2, opacity=0.8, marker_line_color='orange')
-    fig4.update_layout(title_text='Período considerado para predecir el precio de cierre de las acciones', font_size=15, font_color='black')
+    fig4.update_layout(title_text='Período considerado para predecir el precio de cierre de las acciones', font_size=15)
     fig4.update_xaxes(showgrid=False)
     fig4.update_yaxes(showgrid=False)
     st.plotly_chart(fig4)
@@ -141,7 +141,7 @@ def app():
 
     epochs = range(len(loss))
     fig5=px.line(x=epochs, y=[loss,val_loss], labels={'x':'Epochs','y':'Loss'})
-    fig5.update_layout(title_text='Loss,val_loss vs Epochs', font_size=15, font_color='black',legend_title_text='Loss,val_loss')
+    fig5.update_layout(title_text='Loss,val_loss vs Epochs', font_size=15,legend_title_text='Loss,val_loss')
     fig5.update_xaxes(showgrid=False)
     fig5.update_yaxes(showgrid=False)
     st.subheader("Loss,val_loss vs Epochs")
@@ -216,7 +216,7 @@ def app():
                                             plotdf['test_predicted_close']],
                 labels={'value':'Stock price','date': 'Date'})
     fig6.update_layout(title_text='Comparación entre el precio de cierre original y el precio de cierre previsto',
-                    plot_bgcolor='white', font_size=15, font_color='black', legend_title_text='Close Price')
+                    plot_bgcolor='white', font_size=15, legend_title_text='Close Price')
     fig6.for_each_trace(lambda t:  t.update(name = next(names)))
 
     fig6.update_xaxes(showgrid=False)
@@ -290,7 +290,7 @@ def app():
                                                         new_pred_plot['next_predicted_days_value']],
                 labels={'value': 'Stock price','index': 'Timestamp'})
     fig.update_layout(title_text='Compara los últimos 15 días con los próximos 30 días',
-                    plot_bgcolor='white', font_size=15, font_color='black',legend_title_text='Close Price')
+                    plot_bgcolor='white', font_size=15,legend_title_text='Close Price')
 
     fig.for_each_trace(lambda t:  t.update(name = next(names)))
     fig.update_xaxes(showgrid=False)
@@ -307,7 +307,7 @@ def app():
 
     fig = px.line(lstmdf,labels={'value': 'Stock price','index': 'Timestamp'})
     fig.update_layout(title_text='Plotting whole closing stock price with prediction',
-                    plot_bgcolor='white', font_size=15, font_color='black',legend_title_text='Stock')
+                    plot_bgcolor='white', font_size=15,legend_title_text='Stock')
 
     fig.for_each_trace(lambda t:  t.update(name = next(names)))
 
