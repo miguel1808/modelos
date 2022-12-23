@@ -7,7 +7,8 @@ xgboost == 1.5.0
 scikit-learn==1.2.0
 numpy==1.23.5
 yfinance==0.1.90
-spacy==3.4.4
+spacy==3.4.0
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.0/en_core_web_sm-3.4.0-py3-none-any.whl
 protobuf==3.19.0
 matplotlib==3.6.2
 pandas_datareader==0.10.0
@@ -18,5 +19,5 @@ wordcloud==1.8.2.2
 nltk==3.8
 snscrape==0.4.3.20220106
 textblob==0.17.1
-en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.0/en_core_web_sm-2.2.0.tar.gz
+
 click==8.1.3
