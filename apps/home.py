@@ -10,6 +10,7 @@ def app():
     st.write("Silva Barra, Ernesto Franco - 19200116")
     st.write("Tocto Mallqui, Alexis Guiomar - 19200105")
     st.write("Torres Rodriguez, Julian Sebastian - 19200268")
+    st.write("Pablo Mamani David Alcides - 19200091")
 
 
 
